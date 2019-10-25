@@ -1,13 +1,12 @@
 # Desafio LiveOnSolutions iOS
 
 ## Criar um aplicativo para consultar a API do GitHub ##
-Criar um aplicativo para consultar a API do GitHub e trazer os repositórios mais populares de Swift. Basear-se no mockup fornecido:
+Criar um aplicativo para consultar a API do GitHub e trazer os repositórios mais populares de Swift.
 
 ## O que será avaliado:
 - Arquitetura escolhida para desenvolvimento do teste.
 - Qualidade do código.
-- Abstração das diferentes camadas.
-- Adoção de boas práticas recomendadas pela Apple no uso das APIs e no visual do app.
+- Adoção de boas práticas recomendadas pela Apple no uso das APIs e Human Interface Guidelines.
 - Funcionamento do produto entregue.
 
 ### Requisitos
