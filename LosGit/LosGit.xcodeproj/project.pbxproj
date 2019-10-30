@@ -1,0 +1,499 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6B7808BED8CD785B8FC3DE2B /* Pods_LosGit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B0E9D7F8F44A40BCCA2D542 /* Pods_LosGit.framework */; };
+		CF516EEF2369F1F5004BE544 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF516EEE2369F1F5004BE544 /* CustomNavigationController.swift */; };
+		CF516EF12369F41C004BE544 /* PullRequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF516EF02369F41C004BE544 /* PullRequestService.swift */; };
+		CF516EF32369F850004BE544 /* PullRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF516EF22369F850004BE544 /* PullRequest.swift */; };
+		CF516EF52369F9CE004BE544 /* PullRequestAuthor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF516EF42369F9CE004BE544 /* PullRequestAuthor.swift */; };
+		CF80CE642369143800C70D74 /* RepositoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF80CE632369143800C70D74 /* RepositoryCell.swift */; };
+		CFABD41A2368CD5300A7A5C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFABD4192368CD5300A7A5C9 /* AppDelegate.swift */; };
+		CFABD41C2368CD5300A7A5C9 /* RepositoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFABD41B2368CD5300A7A5C9 /* RepositoryController.swift */; };
+		CFABD41F2368CD5300A7A5C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFABD41D2368CD5300A7A5C9 /* Main.storyboard */; };
+		CFABD4222368CD5300A7A5C9 /* LosGit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CFABD4202368CD5300A7A5C9 /* LosGit.xcdatamodeld */; };
+		CFABD4242368CD5500A7A5C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFABD4232368CD5500A7A5C9 /* Assets.xcassets */; };
+		CFABD4272368CD5500A7A5C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFABD4252368CD5500A7A5C9 /* LaunchScreen.storyboard */; };
+		CFDB214C2369A16F00746E63 /* RepositoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDB214B2369A16F00746E63 /* RepositoryService.swift */; };
+		CFDB214E2369BE8000746E63 /* RepositoryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDB214D2369BE8000746E63 /* RepositoryResponse.swift */; };
+		CFDB21502369BFCD00746E63 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDB214F2369BFCD00746E63 /* Repository.swift */; };
+		CFDB21522369C0FB00746E63 /* RepositoryOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDB21512369C0FB00746E63 /* RepositoryOwner.swift */; };
+		CFDB21542369CFAA00746E63 /* PullRequestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDB21532369CFAA00746E63 /* PullRequestController.swift */; };
+		CFDB21562369D9D300746E63 /* PullRequestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDB21552369D9D300746E63 /* PullRequestCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		43A0C5319209A1C0D3F4CCAE /* Pods-LosGit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LosGit.release.xcconfig"; path = "Target Support Files/Pods-LosGit/Pods-LosGit.release.xcconfig"; sourceTree = "<group>"; };
+		4B0E9D7F8F44A40BCCA2D542 /* Pods_LosGit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LosGit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B832738ADB0759EDF4520755 /* Pods-LosGit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LosGit.debug.xcconfig"; path = "Target Support Files/Pods-LosGit/Pods-LosGit.debug.xcconfig"; sourceTree = "<group>"; };
+		CF516EEE2369F1F5004BE544 /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
+		CF516EF02369F41C004BE544 /* PullRequestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestService.swift; sourceTree = "<group>"; };
+		CF516EF22369F850004BE544 /* PullRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequest.swift; sourceTree = "<group>"; };
+		CF516EF42369F9CE004BE544 /* PullRequestAuthor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestAuthor.swift; sourceTree = "<group>"; };
+		CF80CE632369143800C70D74 /* RepositoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryCell.swift; sourceTree = "<group>"; };
+		CFABD4162368CD5300A7A5C9 /* LosGit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LosGit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFABD4192368CD5300A7A5C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CFABD41B2368CD5300A7A5C9 /* RepositoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryController.swift; sourceTree = "<group>"; };
+		CFABD41E2368CD5300A7A5C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CFABD4212368CD5300A7A5C9 /* LosGit.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LosGit.xcdatamodel; sourceTree = "<group>"; };
+		CFABD4232368CD5500A7A5C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CFABD4262368CD5500A7A5C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CFABD4282368CD5500A7A5C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFDB214B2369A16F00746E63 /* RepositoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryService.swift; sourceTree = "<group>"; };
+		CFDB214D2369BE8000746E63 /* RepositoryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryResponse.swift; sourceTree = "<group>"; };
+		CFDB214F2369BFCD00746E63 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		CFDB21512369C0FB00746E63 /* RepositoryOwner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryOwner.swift; sourceTree = "<group>"; };
+		CFDB21532369CFAA00746E63 /* PullRequestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestController.swift; sourceTree = "<group>"; };
+		CFDB21552369D9D300746E63 /* PullRequestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CFABD4132368CD5300A7A5C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B7808BED8CD785B8FC3DE2B /* Pods_LosGit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		063AC3E30EB569DE2FCDF378 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B832738ADB0759EDF4520755 /* Pods-LosGit.debug.xcconfig */,
+				43A0C5319209A1C0D3F4CCAE /* Pods-LosGit.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CF2DDDEF2368EE690030958B /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				CFABD41B2368CD5300A7A5C9 /* RepositoryController.swift */,
+				CF80CE632369143800C70D74 /* RepositoryCell.swift */,
+				CFDB21532369CFAA00746E63 /* PullRequestController.swift */,
+				CFDB21552369D9D300746E63 /* PullRequestCell.swift */,
+				CF516EEE2369F1F5004BE544 /* CustomNavigationController.swift */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		CF80CE652369190400C70D74 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				CFDB214B2369A16F00746E63 /* RepositoryService.swift */,
+				CFDB214D2369BE8000746E63 /* RepositoryResponse.swift */,
+				CFDB214F2369BFCD00746E63 /* Repository.swift */,
+				CFDB21512369C0FB00746E63 /* RepositoryOwner.swift */,
+				CF516EF02369F41C004BE544 /* PullRequestService.swift */,
+				CF516EF22369F850004BE544 /* PullRequest.swift */,
+				CF516EF42369F9CE004BE544 /* PullRequestAuthor.swift */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		CF80CE662369198700C70D74 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				CFABD41D2368CD5300A7A5C9 /* Main.storyboard */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		CFABD40D2368CD5300A7A5C9 = {
+			isa = PBXGroup;
+			children = (
+				CFABD4182368CD5300A7A5C9 /* LosGit */,
+				CFABD4172368CD5300A7A5C9 /* Products */,
+				063AC3E30EB569DE2FCDF378 /* Pods */,
+				E18BDED1E05E16CBC0544DF2 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CFABD4172368CD5300A7A5C9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CFABD4162368CD5300A7A5C9 /* LosGit.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CFABD4182368CD5300A7A5C9 /* LosGit */ = {
+			isa = PBXGroup;
+			children = (
+				CF80CE662369198700C70D74 /* view */,
+				CF80CE652369190400C70D74 /* model */,
+				CF2DDDEF2368EE690030958B /* controller */,
+				CFABD4192368CD5300A7A5C9 /* AppDelegate.swift */,
+				CFABD4232368CD5500A7A5C9 /* Assets.xcassets */,
+				CFABD4252368CD5500A7A5C9 /* LaunchScreen.storyboard */,
+				CFABD4282368CD5500A7A5C9 /* Info.plist */,
+				CFABD4202368CD5300A7A5C9 /* LosGit.xcdatamodeld */,
+			);
+			path = LosGit;
+			sourceTree = "<group>";
+		};
+		E18BDED1E05E16CBC0544DF2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4B0E9D7F8F44A40BCCA2D542 /* Pods_LosGit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CFABD4152368CD5300A7A5C9 /* LosGit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CFABD42B2368CD5500A7A5C9 /* Build configuration list for PBXNativeTarget "LosGit" */;
+			buildPhases = (
+				5B7382211C5D9D753D418CFE /* [CP] Check Pods Manifest.lock */,
+				CFABD4122368CD5300A7A5C9 /* Sources */,
+				CFABD4132368CD5300A7A5C9 /* Frameworks */,
+				CFABD4142368CD5300A7A5C9 /* Resources */,
+				05EF54C95D557CBA8598A8E4 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LosGit;
+			productName = LosGit;
+			productReference = CFABD4162368CD5300A7A5C9 /* LosGit.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CFABD40E2368CD5300A7A5C9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Marco Tullio Braga Filho";
+				TargetAttributes = {
+					CFABD4152368CD5300A7A5C9 = {
+						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1110;
+					};
+				};
+			};
+			buildConfigurationList = CFABD4112368CD5300A7A5C9 /* Build configuration list for PBXProject "LosGit" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CFABD40D2368CD5300A7A5C9;
+			productRefGroup = CFABD4172368CD5300A7A5C9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CFABD4152368CD5300A7A5C9 /* LosGit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CFABD4142368CD5300A7A5C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFABD4272368CD5500A7A5C9 /* LaunchScreen.storyboard in Resources */,
+				CFABD4242368CD5500A7A5C9 /* Assets.xcassets in Resources */,
+				CFABD41F2368CD5300A7A5C9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		05EF54C95D557CBA8598A8E4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LosGit/Pods-LosGit-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LosGit/Pods-LosGit-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LosGit/Pods-LosGit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5B7382211C5D9D753D418CFE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LosGit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CFABD4122368CD5300A7A5C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF516EEF2369F1F5004BE544 /* CustomNavigationController.swift in Sources */,
+				CFDB21542369CFAA00746E63 /* PullRequestController.swift in Sources */,
+				CFDB21502369BFCD00746E63 /* Repository.swift in Sources */,
+				CF516EF32369F850004BE544 /* PullRequest.swift in Sources */,
+				CFDB21562369D9D300746E63 /* PullRequestCell.swift in Sources */,
+				CF516EF52369F9CE004BE544 /* PullRequestAuthor.swift in Sources */,
+				CFABD41C2368CD5300A7A5C9 /* RepositoryController.swift in Sources */,
+				CFDB214C2369A16F00746E63 /* RepositoryService.swift in Sources */,
+				CF516EF12369F41C004BE544 /* PullRequestService.swift in Sources */,
+				CFDB21522369C0FB00746E63 /* RepositoryOwner.swift in Sources */,
+				CFABD41A2368CD5300A7A5C9 /* AppDelegate.swift in Sources */,
+				CFABD4222368CD5300A7A5C9 /* LosGit.xcdatamodeld in Sources */,
+				CFDB214E2369BE8000746E63 /* RepositoryResponse.swift in Sources */,
+				CF80CE642369143800C70D74 /* RepositoryCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CFABD41D2368CD5300A7A5C9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CFABD41E2368CD5300A7A5C9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CFABD4252368CD5500A7A5C9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CFABD4262368CD5500A7A5C9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CFABD4292368CD5500A7A5C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CFABD42A2368CD5500A7A5C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CFABD42C2368CD5500A7A5C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B832738ADB0759EDF4520755 /* Pods-LosGit.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L997527VC7;
+				INFOPLIST_FILE = LosGit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mtbf.LosGit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CFABD42D2368CD5500A7A5C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43A0C5319209A1C0D3F4CCAE /* Pods-LosGit.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L997527VC7;
+				INFOPLIST_FILE = LosGit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mtbf.LosGit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CFABD4112368CD5300A7A5C9 /* Build configuration list for PBXProject "LosGit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFABD4292368CD5500A7A5C9 /* Debug */,
+				CFABD42A2368CD5500A7A5C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CFABD42B2368CD5500A7A5C9 /* Build configuration list for PBXNativeTarget "LosGit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFABD42C2368CD5500A7A5C9 /* Debug */,
+				CFABD42D2368CD5500A7A5C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CFABD4202368CD5300A7A5C9 /* LosGit.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CFABD4212368CD5300A7A5C9 /* LosGit.xcdatamodel */,
+			);
+			currentVersion = CFABD4212368CD5300A7A5C9 /* LosGit.xcdatamodel */;
+			path = LosGit.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = CFABD40E2368CD5300A7A5C9 /* Project object */;
+}
