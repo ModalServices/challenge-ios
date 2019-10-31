@@ -21,6 +21,15 @@ class PullRequest: Mappable {
     required init?(map: Map) {
     }
     
+    init(entity: PullRequestEntityMO) {
+        url = entity.url
+        author = PullRequestAuthor(name: entity.authorName, photoUrl: entity.authorPhotoUrl)
+        title = entity.title
+        creationDate = entity.creationDate
+        updateDate = entity.updateDate
+        body = entity.body
+    }
+    
     func mapping(map: Map) {
         url <- map["html_url"]
         author <- map["user"]

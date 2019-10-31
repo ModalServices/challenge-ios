@@ -8,6 +8,7 @@
 
 import UIKit
 import SDWebImage
+import Alamofire
 
 class PullRequestController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -74,7 +75,11 @@ class PullRequestController: UIViewController, UITableViewDataSource, UITableVie
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let pullRequest = pullRequests[indexPath.row]
         
-        if let urlString = pullRequest.url, let url = URL(string: urlString), UIApplication.shared.canOpenURL(url) {
+        if NetworkReachabilityManager()?.isReachable ?? false,
+            let urlString = pullRequest.url,
+            let url = URL(string: urlString),
+            UIApplication.shared.canOpenURL(url)
+        {
             UIApplication.shared.open(url)
         }
         

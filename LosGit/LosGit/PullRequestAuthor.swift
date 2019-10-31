@@ -17,6 +17,11 @@ class PullRequestAuthor: Mappable {
     required init?(map: Map) {
     }
     
+    init(name: String?, photoUrl: String?) {
+        self.name = name
+        self.photoUrl = photoUrl
+    }
+    
     func mapping(map: Map) {
         name <- map["login"]
         photoUrl <- map["avatar_url"]

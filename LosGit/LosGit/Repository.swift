@@ -20,6 +20,14 @@ class Repository: Mappable {
     required init?(map: Map) {
     }
     
+    init(entity: RepositoryEntityMO) {
+        name = entity.name
+        description = entity.observations
+        owner = RepositoryOwner(name: entity.ownerName, photoUrl: entity.ownerPhotoUrl)
+        forksCount = Int(entity.forksCount)
+        starsCount = Int(entity.starsCount)
+    }
+    
     func mapping(map: Map) {
         name <- map["name"]
         description <- map["description"]
