@@ -13,6 +13,14 @@
 		7168117D237676BD003A7C78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7168117B237676BD003A7C78 /* Main.storyboard */; };
 		7168117F237676BF003A7C78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7168117E237676BF003A7C78 /* Assets.xcassets */; };
 		71681182237676BF003A7C78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71681180237676BF003A7C78 /* LaunchScreen.storyboard */; };
+		7168119023767B0A003A7C78 /* SectionComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7168118A23767B0A003A7C78 /* SectionComponent.swift */; };
+		7168119123767B0A003A7C78 /* HeaderTitleModularView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7168118B23767B0A003A7C78 /* HeaderTitleModularView.swift */; };
+		7168119323767B0A003A7C78 /* EmptyComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7168118D23767B0A003A7C78 /* EmptyComponent.swift */; };
+		7168119423767B0A003A7C78 /* ModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7168118E23767B0A003A7C78 /* ModelController.swift */; };
+		7168119523767B0A003A7C78 /* ModuleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7168118F23767B0A003A7C78 /* ModuleCell.swift */; };
+		7168119823767B7C003A7C78 /* HelperColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7168119723767B7C003A7C78 /* HelperColors.swift */; };
+		7168119A23767BFE003A7C78 /* HelperDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7168119923767BFE003A7C78 /* HelperDevice.swift */; };
+		7168119C23767C30003A7C78 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7168119B23767C30003A7C78 /* Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +33,14 @@
 		7168117E237676BF003A7C78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		71681181237676BF003A7C78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		71681183237676BF003A7C78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7168118A23767B0A003A7C78 /* SectionComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionComponent.swift; sourceTree = "<group>"; };
+		7168118B23767B0A003A7C78 /* HeaderTitleModularView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderTitleModularView.swift; sourceTree = "<group>"; };
+		7168118D23767B0A003A7C78 /* EmptyComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyComponent.swift; sourceTree = "<group>"; };
+		7168118E23767B0A003A7C78 /* ModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelController.swift; sourceTree = "<group>"; };
+		7168118F23767B0A003A7C78 /* ModuleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModuleCell.swift; sourceTree = "<group>"; };
+		7168119723767B7C003A7C78 /* HelperColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperColors.swift; sourceTree = "<group>"; };
+		7168119923767BFE003A7C78 /* HelperDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperDevice.swift; sourceTree = "<group>"; };
+		7168119B23767C30003A7C78 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		863BFC200C6252382C7B0B40 /* Pods-LiveOnChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiveOnChallenge.release.xcconfig"; path = "Target Support Files/Pods-LiveOnChallenge/Pods-LiveOnChallenge.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,13 +86,37 @@
 			isa = PBXGroup;
 			children = (
 				71681177237676BD003A7C78 /* AppDelegate.swift */,
+				7168118923767AF4003A7C78 /* ModularArc */,
 				71681179237676BD003A7C78 /* ViewController.swift */,
 				7168117B237676BD003A7C78 /* Main.storyboard */,
+				7168119623767B5F003A7C78 /* Helpers */,
 				7168117E237676BF003A7C78 /* Assets.xcassets */,
 				71681180237676BF003A7C78 /* LaunchScreen.storyboard */,
 				71681183237676BF003A7C78 /* Info.plist */,
 			);
 			path = LiveOnChallenge;
+			sourceTree = "<group>";
+		};
+		7168118923767AF4003A7C78 /* ModularArc */ = {
+			isa = PBXGroup;
+			children = (
+				7168118D23767B0A003A7C78 /* EmptyComponent.swift */,
+				7168118B23767B0A003A7C78 /* HeaderTitleModularView.swift */,
+				7168118E23767B0A003A7C78 /* ModelController.swift */,
+				7168118F23767B0A003A7C78 /* ModuleCell.swift */,
+				7168118A23767B0A003A7C78 /* SectionComponent.swift */,
+			);
+			path = ModularArc;
+			sourceTree = "<group>";
+		};
+		7168119623767B5F003A7C78 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				7168119723767B7C003A7C78 /* HelperColors.swift */,
+				7168119923767BFE003A7C78 /* HelperDevice.swift */,
+				7168119B23767C30003A7C78 /* Utils.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		8ED56E3E960879D7ECCEE87B /* Pods */ = {
@@ -85,7 +125,6 @@
 				16A366881BFC969065FDADFA /* Pods-LiveOnChallenge.debug.xcconfig */,
 				863BFC200C6252382C7B0B40 /* Pods-LiveOnChallenge.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -100,6 +139,7 @@
 				71681170237676BD003A7C78 /* Sources */,
 				71681171237676BD003A7C78 /* Frameworks */,
 				71681172237676BD003A7C78 /* Resources */,
+				FE8CF96AAFE207CD54862357 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -178,6 +218,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		FE8CF96AAFE207CD54862357 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LiveOnChallenge/Pods-LiveOnChallenge-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LiveOnChallenge/Pods-LiveOnChallenge-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LiveOnChallenge/Pods-LiveOnChallenge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -186,6 +243,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				7168117A237676BD003A7C78 /* ViewController.swift in Sources */,
+				7168119523767B0A003A7C78 /* ModuleCell.swift in Sources */,
+				7168119123767B0A003A7C78 /* HeaderTitleModularView.swift in Sources */,
+				7168119823767B7C003A7C78 /* HelperColors.swift in Sources */,
+				7168119323767B0A003A7C78 /* EmptyComponent.swift in Sources */,
+				7168119C23767C30003A7C78 /* Utils.swift in Sources */,
+				7168119023767B0A003A7C78 /* SectionComponent.swift in Sources */,
+				7168119A23767BFE003A7C78 /* HelperDevice.swift in Sources */,
+				7168119423767B0A003A7C78 /* ModelController.swift in Sources */,
 				71681178237676BD003A7C78 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
