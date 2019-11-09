@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2FBF857CB243FADE71E3AA4C /* Pods_LiveOnChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E93DA743352653951E0F436 /* Pods_LiveOnChallenge.framework */; };
 		71681178237676BD003A7C78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71681177237676BD003A7C78 /* AppDelegate.swift */; };
 		7168117A237676BD003A7C78 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71681179237676BD003A7C78 /* ViewController.swift */; };
 		7168117D237676BD003A7C78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7168117B237676BD003A7C78 /* Main.storyboard */; };
@@ -15,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		16A366881BFC969065FDADFA /* Pods-LiveOnChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiveOnChallenge.debug.xcconfig"; path = "Target Support Files/Pods-LiveOnChallenge/Pods-LiveOnChallenge.debug.xcconfig"; sourceTree = "<group>"; };
+		2E93DA743352653951E0F436 /* Pods_LiveOnChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LiveOnChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		71681174237676BD003A7C78 /* LiveOnChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiveOnChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71681177237676BD003A7C78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71681179237676BD003A7C78 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		7168117E237676BF003A7C78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		71681181237676BF003A7C78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		71681183237676BF003A7C78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		863BFC200C6252382C7B0B40 /* Pods-LiveOnChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiveOnChallenge.release.xcconfig"; path = "Target Support Files/Pods-LiveOnChallenge/Pods-LiveOnChallenge.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FBF857CB243FADE71E3AA4C /* Pods_LiveOnChallenge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C795DC361CAF597316F11D2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2E93DA743352653951E0F436 /* Pods_LiveOnChallenge.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7168116B237676BD003A7C78 = {
 			isa = PBXGroup;
 			children = (
 				71681176237676BD003A7C78 /* LiveOnChallenge */,
 				71681175237676BD003A7C78 /* Products */,
+				8ED56E3E960879D7ECCEE87B /* Pods */,
+				5C795DC361CAF597316F11D2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +79,16 @@
 			path = LiveOnChallenge;
 			sourceTree = "<group>";
 		};
+		8ED56E3E960879D7ECCEE87B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				16A366881BFC969065FDADFA /* Pods-LiveOnChallenge.debug.xcconfig */,
+				863BFC200C6252382C7B0B40 /* Pods-LiveOnChallenge.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,6 +96,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 71681186237676BF003A7C78 /* Build configuration list for PBXNativeTarget "LiveOnChallenge" */;
 			buildPhases = (
+				1A67D58570FE2EF58C14AA0D /* [CP] Check Pods Manifest.lock */,
 				71681170237676BD003A7C78 /* Sources */,
 				71681171237676BD003A7C78 /* Frameworks */,
 				71681172237676BD003A7C78 /* Resources */,
@@ -128,6 +154,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1A67D58570FE2EF58C14AA0D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LiveOnChallenge-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		71681170237676BD003A7C78 /* Sources */ = {
@@ -279,6 +330,7 @@
 		};
 		71681187237676BF003A7C78 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16A366881BFC969065FDADFA /* Pods-LiveOnChallenge.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -297,6 +349,7 @@
 		};
 		71681188237676BF003A7C78 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 863BFC200C6252382C7B0B40 /* Pods-LiveOnChallenge.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
