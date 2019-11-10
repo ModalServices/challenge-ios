@@ -31,11 +31,13 @@ class ModuleController: UIViewController, SectionManager {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        self.titleTemp = self.navigationItem.title ?? ""
+        self.view.backgroundColor = .clear
         self.configSubviews()
         self.registerCells()
         self.configNavBarTitle()
         self.configureCustoms()
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -50,31 +52,26 @@ class ModuleController: UIViewController, SectionManager {
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .default
+        return .lightContent
     }
     
     private func configNavBarTitle(){
         let textAttributes = [
-            NSAttributedString.Key.foregroundColor:UIColor.firstColor,
-            NSAttributedString.Key.font: UIFont.avenirHeavy(20)
+            NSAttributedString.Key.foregroundColor:UIColor.white,
+            NSAttributedString.Key.font: UIFont.avenirBlack(20)
         ]
         
         navigationController?.navigationBar.titleTextAttributes = textAttributes
     }
     
     private func configureCustoms(){
-        self.navigationController?.navigationBar.isTranslucent = true
-        self.navigationController?.navigationBar.barTintColor = .white
-        self.navigationController?.navigationBar.tintColor = UIColor.firstColor
-//        self.navigationController?.navigationBar.backIndicatorImage = #imageLiteral(resourceName: "backIcon")
-//        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = #imageLiteral(resourceName: "backIcon")
+        self.navigationController?.navigationBar.isTranslucent = false
+        self.navigationController?.navigationBar.backgroundColor = .clear
+        let topBarHeight = UIApplication.shared.statusBarFrame.size.height +
+            (self.navigationController?.navigationBar.frame.height ?? 0.0)
         
-        //        self.navigationController?.navigationBar.backgroundColor = .clear
-        //let topBarHeight = UIApplication.shared.statusBarFrame.size.height +
-          //  (self.navigationController?.navigationBar.frame.height ?? 0.0)
-        
-      //  let backgroundLayer = Colors(frame: CGRect(x: 0, y: 0, width: ScreenSize.width, height: topBarHeight))
-        //self.navigationController?.navigationBar.setBackgroundImage(backgroundLayer.imageFromLayer(), for: .default)
+        let backgroundLayer = Colors(frame: CGRect(x: 0, y: 0, width: ScreenSize.width, height: topBarHeight))
+        self.navigationController?.navigationBar.setBackgroundImage(backgroundLayer.imageFromLayer(), for: .default)
     }
     
     private func configSubviews() {
@@ -110,7 +107,10 @@ class ModuleController: UIViewController, SectionManager {
     
     func reloadData(){
         self.moduleTableView.reloadData()
+        self.moduleTableView.isScrollEnabled = ((self.componentViews.first?.components.first as? EmptyComponent) == nil)
     }
+    
+    func loadMore(){}
     
     func insertCell(sec: Int, index: Int) {
         self.moduleTableView.beginUpdates()
@@ -155,6 +155,10 @@ extension ModuleController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ModuleCell", for: indexPath) as? ModuleCell else {return ModuleCell()}
+        if indexPath.row == (self.getSection(indexPath.section)?.components.count ?? 0) - 10 {
+            self.loadMore()
+            return cell
+        }
         cell.moduleModel = self.getSection(indexPath.section)?.components[indexPath.row]
         return cell
     }

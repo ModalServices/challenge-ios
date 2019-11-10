@@ -38,6 +38,7 @@ class EmptyComponent: UIView {
     init(icon: UIImage, title: String, description: String) {
         super.init(frame: CGRect.zero)
         
+        self.backgroundColor = .white
         self.loadSubViews()
         self.icon.image = icon
         self.title.text = title

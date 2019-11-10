@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import HandyJSON
+import SwiftyJSON
 
 extension UIFont {
     
@@ -37,5 +39,15 @@ extension UIFont {
     
     class func avenirBlack(_ ofSize: CGFloat? = 15.0) -> UIFont {
         return UIFont(name: "Avenir-Black", size: ofSize!)!
+    }
+}
+
+extension HandyJSON {
+    static func create(json: JSON) -> HandyJSON? {
+        guard let jsonString = json.rawString(),
+            let object = Self.deserialize(from: jsonString)
+            else {return nil}
+        
+        return object
     }
 }

@@ -13,20 +13,20 @@ extension UIColor {
         return #colorLiteral(red: 0.003921568627, green: 0.4274509804, blue: 0.4784313725, alpha: 1)
     }
     
-    class var secondaryLightColor: UIColor {
+    class var secondaryColor: UIColor {
+        return #colorLiteral(red: 0, green: 0.3590036851, blue: 0.5, alpha: 1)
+    }
+    
+    class var backgroundColor: UIColor {
         return #colorLiteral(red: 0.8745098039, green: 0.9058823529, blue: 0.9607843137, alpha: 1)
+    }
+    
+    class var firstColorLight: UIColor {
+        return #colorLiteral(red: 0.862745098, green: 0.9254901961, blue: 0.937254902, alpha: 1)
     }
     
     class var detailsColor: UIColor {
         return #colorLiteral(red: 0.5411764706, green: 0.5411764706, blue: 0.5411764706, alpha: 1)
-    }
-    
-    class var secondaryColor: UIColor {
-        return #colorLiteral(red: 0.4666666667, green: 0.5254901961, blue: 0.6196078431, alpha: 1)
-    }
-    
-    class var facebookBlue: UIColor {
-        return #colorLiteral(red: 0.231372549, green: 0.3490196078, blue: 0.6, alpha: 1)
     }
     
     class var lightGray: UIColor {
@@ -58,8 +58,8 @@ class Colors {
     var gl:CAGradientLayer!
     
     init(frame: CGRect) {
-        let colorTop = UIColor.secondaryColor.cgColor
-        let colorBottom = UIColor.firstColor.cgColor
+        let colorTop = UIColor.firstColor.cgColor
+        let colorBottom = UIColor.secondaryColor.cgColor
         
         self.gl = CAGradientLayer()
         self.gl.colors = [colorTop, colorBottom]

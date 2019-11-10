@@ -35,7 +35,7 @@ class ModuleCell: UITableViewCell {
         self.clipsToBounds = true
         self.selectionStyle = .none
         self.separatorInset.left = 1000
-        self.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        self.backgroundColor = .clear
     }
     
     required init?(coder aDecoder: NSCoder) {

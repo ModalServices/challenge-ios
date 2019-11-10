@@ -58,10 +58,11 @@ extension SectionManager {
         return section
     }
     
-    func showLoadingComponent(icon: UIImage, title: String = "Carregando...", desc: String = "Por favor, aguarde."){
+    func showLoadingComponent(icon: UIImage = #imageLiteral(resourceName: "loading"), title: String = "Carregando...", desc: String = "Por favor, aguarde."){
         self.componentsTemp = self.componentViews
         self.clearComponents()
         self.addComponent(view: EmptyComponent(icon: icon, title: "Carregando...", description: "Por favor, aguarde."))
+        
     }
     
     func endLoadingComponent(){

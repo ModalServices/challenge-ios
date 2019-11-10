@@ -7,6 +7,7 @@ PODS:
   - DeviceKit (2.3.0)
   - FCAlertView (1.4.0)
   - Gifu (3.2.0)
+  - HandyJSON (4.2.1)
   - IQKeyboardManager (6.5.3)
   - Realm (3.21.0):
     - Realm/Headers (= 3.21.0)
@@ -25,6 +26,7 @@ DEPENDENCIES:
   - DeviceKit
   - FCAlertView
   - Gifu
+  - HandyJSON (~> 4.2.1)
   - IQKeyboardManager
   - RealmSwift (~> 3.13)
   - SnapKit (~> 4.2.0)
@@ -40,6 +42,7 @@ SPEC REPOS:
     - DeviceKit
     - FCAlertView
     - Gifu
+    - HandyJSON
     - IQKeyboardManager
     - Realm
     - RealmSwift
@@ -55,6 +58,7 @@ SPEC CHECKSUMS:
   DeviceKit: da103891aa928d89f64ea8dd8aca738c5f3d8ac0
   FCAlertView: fdddd63381898c1d1a5a20c9f084fbd2c6d12f8b
   Gifu: 7bcb6427457d85e0b4dff5a84ec5947ac19a93ea
+  HandyJSON: d0c5fc80204f29056d59d3e5c4587fa0b16b60a8
   IQKeyboardManager: c2f901164d56807a35788483584d09fa69192e8e
   Realm: 38e9dcb19104b58407167d99f70d4995f7c16023
   RealmSwift: 3183cc1ad48378fbcd634311b22c0e6c44021152
@@ -63,6 +67,6 @@ SPEC CHECKSUMS:
   SwiftMessageBar: bb0ca6eba6725887004bfaba0b35225681b6bd18
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
 
-PODFILE CHECKSUM: fd18f59c53ef08a9312579fbd8a74cf35989ae4c
+PODFILE CHECKSUM: 2adea1c88dd8749c4260273bcd7c762544ec2916
 
 COCOAPODS: 1.7.2
