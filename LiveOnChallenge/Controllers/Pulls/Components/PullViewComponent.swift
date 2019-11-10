@@ -1,5 +1,5 @@
 //
-//  RepoViewComponent.swift
+//  PullViewComponent.swift
 //  LiveOnChallenge
 //
 //  Created by Pedro Albuquerque on 10/11/19.
@@ -8,14 +8,14 @@
 import UIKit
 import SnapKit
 
-protocol RepoViewDelegate: class {
-    func selected(repo: RepositoryModel)
+protocol PullViewDelegate: class {
+    func selected(pr: PullRequestModel)
 }
 
-class RepoViewComponent: UIView {
+class PullViewComponent: UIView {
     
-    weak var delegate: RepoViewDelegate?
-    var repo: RepositoryModel?
+    weak var delegate: PullViewDelegate?
+    var pr: PullRequestModel?
     
     lazy var container: UIView = {
         let vw = UIView(frame: .zero)
@@ -46,22 +46,20 @@ class RepoViewComponent: UIView {
         return text
     }()
     
-    lazy var forksView: HateView = {
-        var obj = HateView()
-        obj.translatesAutoresizingMaskIntoConstraints = false
-        return obj
-    }()
-    
-    lazy var starsView: HateView = {
-        var obj = HateView()
-        obj.translatesAutoresizingMaskIntoConstraints = false
-        return obj
-    }()
-    
     lazy var userView: UserView = {
         var obj = UserView()
         obj.translatesAutoresizingMaskIntoConstraints = false
         return obj
+    }()
+    
+    lazy var date: UILabel = {
+        var text = UILabel(frame: .zero)
+        text.translatesAutoresizingMaskIntoConstraints = false
+        text.font = .avenirHeavy(12)
+        text.textAlignment = .right
+        text.numberOfLines = 1
+        text.textColor = .detailsColor
+        return text
     }()
     
     lazy var arrow: UIImageView = {
@@ -72,27 +70,26 @@ class RepoViewComponent: UIView {
         obj.image = #imageLiteral(resourceName: "arrowIcon")
         return obj
     }()
-
-    init(repo: RepositoryModel) {
+    
+    init(pr: PullRequestModel) {
         super.init(frame: CGRect.zero)
-
+        
         self.backgroundColor = .clear
         
         self.loadSubViews()
-        self.title.text = repo.name
-        self.subTitle.text = repo.description
-        self.forksView.set(icon: #imageLiteral(resourceName: "forkIcon"), hate: repo.forks_count)
-        self.starsView.set(icon: #imageLiteral(resourceName: "starIcon"), hate: repo.stargazers_count)
-        self.userView.set(pictureUrl: repo.owner?.avatar_url, name: repo.owner?.login)
-
-        self.repo = repo
+        self.title.text = pr.title
+        self.subTitle.text = pr.body
+        self.userView.set(pictureUrl: pr.user?.avatar_url, name: pr.user?.login)
+        self.date.text = pr.created_at?.toDateAll()?.ddMMyyyyHHmm
+        
+        self.pr = pr
         
         self.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:))))
     }
     
     @objc func handleTap(_ sender: UITapGestureRecognizer) {
-        guard let repo = repo else {return}
-        delegate?.selected(repo: repo)
+        guard let pr = pr else {return}
+        delegate?.selected(pr: pr)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -132,26 +129,23 @@ class RepoViewComponent: UIView {
             obj.right.equalTo(arrow.snp.left).offset(-6)
         }
         
-        container.addSubview(starsView)
-        starsView.snp.makeConstraints { (obj) in
+        container.addSubview(date)
+        date.snp.makeConstraints { (obj) in
+            obj.height.equalTo(16)
             obj.top.equalTo(subTitle.snp.bottom).offset(10)
             obj.bottom.equalTo(container.snp.bottom).offset(-10)
-            obj.left.equalTo(container.snp.left).offset(14)
-        }
-        
-        container.addSubview(forksView)
-        forksView.snp.makeConstraints { (obj) in
-            obj.top.equalTo(subTitle.snp.bottom).offset(10)
-            obj.bottom.equalTo(container.snp.bottom).offset(-10)
-            obj.left.equalTo(starsView.snp.right).offset(16)
+            obj.right.equalTo(container.snp.right).offset(-14)
         }
         
         container.addSubview(userView)
         userView.snp.makeConstraints { (obj) in
             obj.top.equalTo(subTitle.snp.bottom).offset(10)
             obj.bottom.equalTo(container.snp.bottom).offset(-10)
-            obj.left.equalTo(forksView.snp.right).offset(16)
+            obj.left.equalTo(container.snp.left).offset(14)
+            obj.right.equalTo(container.snp.right).offset(-14)
         }
+    
     }
 }
+
 

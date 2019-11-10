@@ -7,15 +7,13 @@
 
 import UIKit
 
-class RepositoriesViewModel {
-    
-    static let shareInstance = RepositoriesViewModel()
+class RepositoriesManager {
     
     var page = 1
     var repos = [RepositoryModel]()
     
     func getRepos(page: Int, completion: @escaping ([RepositoryModel]) -> Void, error: @escaping (String) -> Void = { (error) in }){
-        let route = RouterManager(router: ReposRouter.getRepos(page: 2))
+        let route = RouterManager(router: ReposRouter.getRepos(page: page))
         APIManager.sharedInstance.request(route: route) { (json) in
             let status = json["statusCode"].intValue
             guard status == 200, let results = json["items"].array else {

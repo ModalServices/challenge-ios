@@ -9,18 +9,19 @@ import UIKit
 
 class RepositoriesViewController: ModuleController {
 
-    let viewModel = RepositoriesViewModel.shareInstance
+    let manager = RepositoriesManager()
     
     override func viewDidLoad() {
         self.title = "Repositories"
         super.viewDidLoad()
         
-        self.loadAPIData()
+        self.addRefresh()
+        self.loadData()
     }
     
     override func loadMore() {
-        viewModel.page += 1
-        viewModel.getRepos(page: viewModel.page, completion: { (repos) in
+        manager.page += 1
+        manager.getRepos(page: manager.page, completion: { (repos) in
             self.loadComponents(repos: repos)
         })
             
@@ -30,21 +31,35 @@ class RepositoriesViewController: ModuleController {
         
         self.view.backgroundColor = .backgroundColor
         
-        viewModel.repos.forEach{
-            self.addComponent(view: RepoViewComponent(repo: $0))
+        repos.forEach{
+            let repoComponent = RepoViewComponent(repo: $0)
+            self.addComponent(view: repoComponent)
+            repoComponent.delegate = self
         }
     }
     
-    func loadAPIData(){
+    override func loadData(){
+        super.loadData()
         self.showLoadingComponent()
-        viewModel.getRepos(page: viewModel.page, completion: { (repos) in
+        manager.getRepos(page: manager.page, completion: { (repos) in
             self.endLoadingComponent()
-            self.loadComponents(repos: self.viewModel.repos)
+            if self.manager.repos.count > 0 {
+                self.loadComponents(repos: self.manager.repos)
+            }else{
+                self.showEmptyComponent()
+            }
         }) { (error) in
             self.endLoadingComponent()
-            print(error)
+            self.showEmptyComponent(title: "Ops, algo deu errado!", desc: error)
         }
     }
+}
 
+extension RepositoriesViewController: RepoViewDelegate {
+    func selected(repo: RepositoryModel) {
+        let vc = PullsViewController()
+        vc.manager.set(repo: repo)
+        self.navigationController?.show(vc, sender: nil)
+    }
 }
 

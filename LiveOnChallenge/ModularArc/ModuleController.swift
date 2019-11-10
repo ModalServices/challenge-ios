@@ -32,12 +32,12 @@ class ModuleController: UIViewController, SectionManager {
         super.viewDidLoad()
         
         self.titleTemp = self.navigationItem.title ?? ""
+        self.navigationController?.navigationBar.tintColor = .white
         self.view.backgroundColor = .clear
         self.configSubviews()
         self.registerCells()
         self.configNavBarTitle()
         self.configureCustoms()
-
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -15,10 +15,10 @@ enum ReposRouter: RouterConfig {
     
     var endPoint: String {
         switch self {
-        case .getRepos(let page):
-            return "search/repositories?q=language:Swift&sort=stars&page=\(page)"
-        case .getPulls(let owner, let repo):
-            return "repos/\(owner)/\(repo)/pulls"
+        case .getRepos:
+            return "search"
+        case .getPulls:
+            return "repos"
         }
     }
     
@@ -27,7 +27,12 @@ enum ReposRouter: RouterConfig {
     }
     
     var urlWithParams: String {
-        return ""
+        switch self {
+        case .getRepos(let page):
+            return "repositories?q=language:Swift&sort=stars&page=\(page)"
+        case .getPulls(let owner, let repo):
+            return "\(owner)/\(repo)/pulls"
+        }
     }
     
     var params: APIParams {

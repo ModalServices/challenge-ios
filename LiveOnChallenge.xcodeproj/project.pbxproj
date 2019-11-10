@@ -27,9 +27,14 @@
 		71F7C6C02377D0F200F837C0 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F7C6BF2377D0F200F837C0 /* APIManager.swift */; };
 		71F7C6C22377D3C300F837C0 /* RouterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F7C6C12377D3C300F837C0 /* RouterManager.swift */; };
 		71F7C6C42377D3EE00F837C0 /* ReposRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F7C6C32377D3EE00F837C0 /* ReposRouter.swift */; };
-		71F7C6C92377D89B00F837C0 /* RepositoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F7C6C82377D89B00F837C0 /* RepositoriesViewModel.swift */; };
+		71F7C6C92377D89B00F837C0 /* RepositoriesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F7C6C82377D89B00F837C0 /* RepositoriesManager.swift */; };
 		71F7C6CB2377DCC000F837C0 /* RepositoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F7C6CA2377DCC000F837C0 /* RepositoryModel.swift */; };
 		71F7C6CD2377E35B00F837C0 /* OwnerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F7C6CC2377E35B00F837C0 /* OwnerModel.swift */; };
+		71F7C6D12378AAEB00F837C0 /* PullsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F7C6D02378AAEB00F837C0 /* PullsViewController.swift */; };
+		71F7C6D32378AB1500F837C0 /* PullsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F7C6D22378AB1500F837C0 /* PullsManager.swift */; };
+		71F7C6D52378AB5200F837C0 /* PullViewComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F7C6D42378AB5200F837C0 /* PullViewComponent.swift */; };
+		71F7C6D72378AC6100F837C0 /* PullRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F7C6D62378AC6100F837C0 /* PullRequestModel.swift */; };
+		71F7C6D92378BE5100F837C0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F7C6D82378BE5100F837C0 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,9 +61,14 @@
 		71F7C6BF2377D0F200F837C0 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		71F7C6C12377D3C300F837C0 /* RouterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterManager.swift; sourceTree = "<group>"; };
 		71F7C6C32377D3EE00F837C0 /* ReposRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposRouter.swift; sourceTree = "<group>"; };
-		71F7C6C82377D89B00F837C0 /* RepositoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesViewModel.swift; sourceTree = "<group>"; };
+		71F7C6C82377D89B00F837C0 /* RepositoriesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesManager.swift; sourceTree = "<group>"; };
 		71F7C6CA2377DCC000F837C0 /* RepositoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryModel.swift; sourceTree = "<group>"; };
 		71F7C6CC2377E35B00F837C0 /* OwnerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerModel.swift; sourceTree = "<group>"; };
+		71F7C6D02378AAEB00F837C0 /* PullsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullsViewController.swift; sourceTree = "<group>"; };
+		71F7C6D22378AB1500F837C0 /* PullsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullsManager.swift; sourceTree = "<group>"; };
+		71F7C6D42378AB5200F837C0 /* PullViewComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullViewComponent.swift; sourceTree = "<group>"; };
+		71F7C6D62378AC6100F837C0 /* PullRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestModel.swift; sourceTree = "<group>"; };
+		71F7C6D82378BE5100F837C0 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		863BFC200C6252382C7B0B40 /* Pods-LiveOnChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiveOnChallenge.release.xcconfig"; path = "Target Support Files/Pods-LiveOnChallenge/Pods-LiveOnChallenge.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -136,6 +146,7 @@
 				7168119723767B7C003A7C78 /* HelperColors.swift */,
 				7168119923767BFE003A7C78 /* HelperDevice.swift */,
 				7168119B23767C30003A7C78 /* Utils.swift */,
+				71F7C6D82378BE5100F837C0 /* Extensions.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -153,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				71F7C6C62377D83900F837C0 /* Repos */,
+				71F7C6CE2378AAB400F837C0 /* Pulls */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -162,6 +174,7 @@
 			children = (
 				71F7C6CA2377DCC000F837C0 /* RepositoryModel.swift */,
 				71F7C6CC2377E35B00F837C0 /* OwnerModel.swift */,
+				71F7C6D62378AC6100F837C0 /* PullRequestModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -188,7 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				71681179237676BD003A7C78 /* RepositoriesViewController.swift */,
-				71F7C6C82377D89B00F837C0 /* RepositoriesViewModel.swift */,
+				71F7C6C82377D89B00F837C0 /* RepositoriesManager.swift */,
 				71F7C6C72377D87300F837C0 /* Components */,
 			);
 			path = Repos;
@@ -198,6 +211,24 @@
 			isa = PBXGroup;
 			children = (
 				71F7C6B22377BBAA00F837C0 /* RepoViewComponent.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		71F7C6CE2378AAB400F837C0 /* Pulls */ = {
+			isa = PBXGroup;
+			children = (
+				71F7C6D02378AAEB00F837C0 /* PullsViewController.swift */,
+				71F7C6D22378AB1500F837C0 /* PullsManager.swift */,
+				71F7C6CF2378AADA00F837C0 /* Components */,
+			);
+			path = Pulls;
+			sourceTree = "<group>";
+		};
+		71F7C6CF2378AADA00F837C0 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				71F7C6D42378AB5200F837C0 /* PullViewComponent.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -325,13 +356,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71F7C6C92377D89B00F837C0 /* RepositoriesViewModel.swift in Sources */,
+				71F7C6C92377D89B00F837C0 /* RepositoriesManager.swift in Sources */,
 				7168117A237676BD003A7C78 /* RepositoriesViewController.swift in Sources */,
 				7168119523767B0A003A7C78 /* ModuleCell.swift in Sources */,
 				71F7C6CB2377DCC000F837C0 /* RepositoryModel.swift in Sources */,
 				7168119123767B0A003A7C78 /* HeaderTitleModularView.swift in Sources */,
 				7168119823767B7C003A7C78 /* HelperColors.swift in Sources */,
 				7168119323767B0A003A7C78 /* EmptyComponent.swift in Sources */,
+				71F7C6D72378AC6100F837C0 /* PullRequestModel.swift in Sources */,
 				71F7C6B32377BBAA00F837C0 /* RepoViewComponent.swift in Sources */,
 				71F7C6C02377D0F200F837C0 /* APIManager.swift in Sources */,
 				7168119C23767C30003A7C78 /* Utils.swift in Sources */,
@@ -339,11 +371,15 @@
 				7168119023767B0A003A7C78 /* SectionComponent.swift in Sources */,
 				71F7C6B52377BEA300F837C0 /* HateView.swift in Sources */,
 				71F7C6C22377D3C300F837C0 /* RouterManager.swift in Sources */,
+				71F7C6D92378BE5100F837C0 /* Extensions.swift in Sources */,
 				71F7C6CD2377E35B00F837C0 /* OwnerModel.swift in Sources */,
 				7168119A23767BFE003A7C78 /* HelperDevice.swift in Sources */,
 				71F7C6BA2377CB6D00F837C0 /* UserView.swift in Sources */,
+				71F7C6D32378AB1500F837C0 /* PullsManager.swift in Sources */,
 				7168119423767B0A003A7C78 /* ModuleController.swift in Sources */,
 				71681178237676BD003A7C78 /* AppDelegate.swift in Sources */,
+				71F7C6D12378AAEB00F837C0 /* PullsViewController.swift in Sources */,
+				71F7C6D52378AB5200F837C0 /* PullViewComponent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

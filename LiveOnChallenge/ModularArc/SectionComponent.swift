@@ -71,9 +71,9 @@ extension SectionManager {
         self.reloadData()
     }
     
-    func showEmptyComponent(icon: UIImage, title: String = "Carregando...", desc: String = "Por favor, aguarde."){
+    func showEmptyComponent(icon: UIImage = #imageLiteral(resourceName: "empty"), title: String = "Nenhum dado foi encontrado", desc: String = "Tente Novamente"){
         self.clearComponents()
-        self.addComponent(view: EmptyComponent(icon: icon, title: "Nenhum dado foi encontrado", description: "Tente Novamente"))
+        self.addComponent(view: EmptyComponent(icon: icon, title: title, description: desc))
     }
     
     private func getSection(_ sec: Int) -> SectionComponent {
