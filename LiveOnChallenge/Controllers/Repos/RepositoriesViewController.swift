@@ -20,11 +20,12 @@ class RepositoriesViewController: ModuleController {
     }
     
     override func loadMore() {
-        manager.page += 1
-        manager.getRepos(page: manager.page, completion: { (repos) in
-            self.loadComponents(repos: repos)
-        })
-            
+        if HelperDevice.checkConnection(){
+            manager.page += 1
+            manager.getRepos(page: manager.page, completion: { (repos) in
+                self.loadComponents(repos: repos)
+            })
+        }
     }
 
     func loadComponents(repos: [RepositoryModel]){

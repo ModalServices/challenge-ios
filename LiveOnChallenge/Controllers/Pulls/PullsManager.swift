@@ -22,7 +22,12 @@ class PullsManager {
         APIManager.sharedInstance.request(route: route) { (json) in
             let status = json["statusCode"].intValue
             guard status == 200, let results = json["resultValue"].array else {
-                error(json["statusMessage"].string ?? APIManager.errorStandard)
+                if !HelperDevice.checkConnection(), let saved = (DAOManager.get(type: PullRequestModel.self) as? [PullRequestModel])?.filter({$0.repo?.id == self.repo?.id}), saved.count > 0 {
+                    self.prs = saved
+                    completion(saved)
+                }else{
+                    error(json["statusMessage"].string ?? APIManager.errorStandard)
+                }
                 return
             }
             
@@ -33,6 +38,8 @@ class PullsManager {
                     }
                 }
             }
+            
+            DAOManager.save(type: PullRequestModel.self, obj: self.prs)
             completion(self.prs)
         }
     }

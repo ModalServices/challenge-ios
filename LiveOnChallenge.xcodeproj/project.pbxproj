@@ -34,7 +34,12 @@
 		71F7C6D32378AB1500F837C0 /* PullsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F7C6D22378AB1500F837C0 /* PullsManager.swift */; };
 		71F7C6D52378AB5200F837C0 /* PullViewComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F7C6D42378AB5200F837C0 /* PullViewComponent.swift */; };
 		71F7C6D72378AC6100F837C0 /* PullRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F7C6D62378AC6100F837C0 /* PullRequestModel.swift */; };
-		71F7C6D92378BE5100F837C0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F7C6D82378BE5100F837C0 /* Extensions.swift */; };
+		71F7C6DC2378CB0600F837C0 /* DAOManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F7C6DB2378CB0600F837C0 /* DAOManager.swift */; };
+		71F7C6DF2378CC8000F837C0 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F7C6DE2378CC8000F837C0 /* RealmManager.swift */; };
+		71F7C6E4237921E600F837C0 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F7C6E3237921E600F837C0 /* WebViewController.swift */; };
+		71F7C6E62379233800F837C0 /* WebViewComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F7C6E52379233800F837C0 /* WebViewComponent.swift */; };
+		71F7C6EA237923AC00F837C0 /* WebViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F7C6E9237923AC00F837C0 /* WebViewManager.swift */; };
+		71F7C6EC2379260900F837C0 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F7C6EB2379260900F837C0 /* TitleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,7 +73,13 @@
 		71F7C6D22378AB1500F837C0 /* PullsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullsManager.swift; sourceTree = "<group>"; };
 		71F7C6D42378AB5200F837C0 /* PullViewComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullViewComponent.swift; sourceTree = "<group>"; };
 		71F7C6D62378AC6100F837C0 /* PullRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestModel.swift; sourceTree = "<group>"; };
-		71F7C6D82378BE5100F837C0 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		71F7C6DB2378CB0600F837C0 /* DAOManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAOManager.swift; sourceTree = "<group>"; };
+		71F7C6DE2378CC8000F837C0 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		71F7C6E02378CD6700F837C0 /* LiveOnChallenge.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LiveOnChallenge.entitlements; sourceTree = "<group>"; };
+		71F7C6E3237921E600F837C0 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		71F7C6E52379233800F837C0 /* WebViewComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewComponent.swift; sourceTree = "<group>"; };
+		71F7C6E9237923AC00F837C0 /* WebViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewManager.swift; sourceTree = "<group>"; };
+		71F7C6EB2379260900F837C0 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		863BFC200C6252382C7B0B40 /* Pods-LiveOnChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiveOnChallenge.release.xcconfig"; path = "Target Support Files/Pods-LiveOnChallenge/Pods-LiveOnChallenge.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,9 +124,11 @@
 		71681176237676BD003A7C78 /* LiveOnChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				71F7C6E02378CD6700F837C0 /* LiveOnChallenge.entitlements */,
 				71681177237676BD003A7C78 /* AppDelegate.swift */,
 				71F7C6BE2377D0E300F837C0 /* API */,
 				71F7C6BD2377D0A600F837C0 /* Model */,
+				71F7C6DD2378CC7000F837C0 /* Managers */,
 				7168118923767AF4003A7C78 /* ModularArc */,
 				71F7C6B62377BEAD00F837C0 /* Views */,
 				71F7C6B82377BEE200F837C0 /* Controllers */,
@@ -146,7 +159,6 @@
 				7168119723767B7C003A7C78 /* HelperColors.swift */,
 				7168119923767BFE003A7C78 /* HelperDevice.swift */,
 				7168119B23767C30003A7C78 /* Utils.swift */,
-				71F7C6D82378BE5100F837C0 /* Extensions.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -156,6 +168,7 @@
 			children = (
 				71F7C6B92377CB6D00F837C0 /* UserView.swift */,
 				71F7C6B42377BEA300F837C0 /* HateView.swift */,
+				71F7C6EB2379260900F837C0 /* TitleView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -165,6 +178,7 @@
 			children = (
 				71F7C6C62377D83900F837C0 /* Repos */,
 				71F7C6CE2378AAB400F837C0 /* Pulls */,
+				71F7C6E72379235100F837C0 /* WebView */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -233,6 +247,33 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		71F7C6DD2378CC7000F837C0 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				71F7C6DB2378CB0600F837C0 /* DAOManager.swift */,
+				71F7C6DE2378CC8000F837C0 /* RealmManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		71F7C6E72379235100F837C0 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				71F7C6E3237921E600F837C0 /* WebViewController.swift */,
+				71F7C6E9237923AC00F837C0 /* WebViewManager.swift */,
+				71F7C6E82379235E00F837C0 /* Components */,
+			);
+			path = WebView;
+			sourceTree = "<group>";
+		};
+		71F7C6E82379235E00F837C0 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				71F7C6E52379233800F837C0 /* WebViewComponent.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		8ED56E3E960879D7ECCEE87B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -275,6 +316,11 @@
 				TargetAttributes = {
 					71681173237676BD003A7C78 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -358,20 +404,25 @@
 			files = (
 				71F7C6C92377D89B00F837C0 /* RepositoriesManager.swift in Sources */,
 				7168117A237676BD003A7C78 /* RepositoriesViewController.swift in Sources */,
+				71F7C6DC2378CB0600F837C0 /* DAOManager.swift in Sources */,
 				7168119523767B0A003A7C78 /* ModuleCell.swift in Sources */,
 				71F7C6CB2377DCC000F837C0 /* RepositoryModel.swift in Sources */,
 				7168119123767B0A003A7C78 /* HeaderTitleModularView.swift in Sources */,
 				7168119823767B7C003A7C78 /* HelperColors.swift in Sources */,
+				71F7C6EA237923AC00F837C0 /* WebViewManager.swift in Sources */,
 				7168119323767B0A003A7C78 /* EmptyComponent.swift in Sources */,
 				71F7C6D72378AC6100F837C0 /* PullRequestModel.swift in Sources */,
 				71F7C6B32377BBAA00F837C0 /* RepoViewComponent.swift in Sources */,
 				71F7C6C02377D0F200F837C0 /* APIManager.swift in Sources */,
+				71F7C6E4237921E600F837C0 /* WebViewController.swift in Sources */,
+				71F7C6E62379233800F837C0 /* WebViewComponent.swift in Sources */,
 				7168119C23767C30003A7C78 /* Utils.swift in Sources */,
+				71F7C6EC2379260900F837C0 /* TitleView.swift in Sources */,
 				71F7C6C42377D3EE00F837C0 /* ReposRouter.swift in Sources */,
+				71F7C6DF2378CC8000F837C0 /* RealmManager.swift in Sources */,
 				7168119023767B0A003A7C78 /* SectionComponent.swift in Sources */,
 				71F7C6B52377BEA300F837C0 /* HateView.swift in Sources */,
 				71F7C6C22377D3C300F837C0 /* RouterManager.swift in Sources */,
-				71F7C6D92378BE5100F837C0 /* Extensions.swift in Sources */,
 				71F7C6CD2377E35B00F837C0 /* OwnerModel.swift in Sources */,
 				7168119A23767BFE003A7C78 /* HelperDevice.swift in Sources */,
 				71F7C6BA2377CB6D00F837C0 /* UserView.swift in Sources */,
@@ -526,6 +577,7 @@
 			baseConfigurationReference = 16A366881BFC969065FDADFA /* Pods-LiveOnChallenge.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LiveOnChallenge/LiveOnChallenge.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WN88JXG7EP;
 				INFOPLIST_FILE = LiveOnChallenge/Info.plist;
@@ -545,6 +597,7 @@
 			baseConfigurationReference = 863BFC200C6252382C7B0B40 /* Pods-LiveOnChallenge.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LiveOnChallenge/LiveOnChallenge.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WN88JXG7EP;
 				INFOPLIST_FILE = LiveOnChallenge/Info.plist;

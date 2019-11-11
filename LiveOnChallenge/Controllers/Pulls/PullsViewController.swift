@@ -12,7 +12,7 @@ class PullsViewController: ModuleController {
     let manager = PullsManager()
     
     override func viewDidLoad() {
-        self.title = "Pull Requests"
+        self.title = manager.repo?.name
         super.viewDidLoad()
         
         self.addRefresh()
@@ -22,8 +22,11 @@ class PullsViewController: ModuleController {
     func loadComponents(){
         
         self.view.backgroundColor = .backgroundColor
+        self.addComponent(view: TitleView(title: "Pull Requests"))
         manager.prs.forEach{
-            self.addComponent(view: PullViewComponent(pr: $0))
+            let prComponent = PullViewComponent(pr: $0)
+            self.addComponent(view: prComponent)
+            prComponent.delegate = self
         }
     }
     
@@ -43,6 +46,14 @@ class PullsViewController: ModuleController {
         }
     }
     
+}
+
+extension PullsViewController: PullViewDelegate {
+    func selected(pr: PullRequestModel) {
+        let vc = WebViewController()
+        vc.manager.set(pr: pr)
+        self.navigationController?.show(vc, sender: nil)
+    }
 }
 
 

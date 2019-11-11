@@ -17,7 +17,12 @@ class RepositoriesManager {
         APIManager.sharedInstance.request(route: route) { (json) in
             let status = json["statusCode"].intValue
             guard status == 200, let results = json["items"].array else {
-                error(json["statusMessage"].string ?? APIManager.errorStandard)
+                if !HelperDevice.checkConnection(), let saved = DAOManager.get(type: RepositoryModel.self) as? [RepositoryModel], saved.count > 0 {
+                    self.repos = saved
+                    completion(saved)
+                }else{
+                    error(json["statusMessage"].string ?? APIManager.errorStandard)
+                }
                 return
             }
             
@@ -30,6 +35,8 @@ class RepositoriesManager {
                     pageRepo.append(repo)
                 }
             }
+
+            DAOManager.save(type: RepositoryModel.self, obj: self.repos)
             completion(pageRepo)
         }
     }

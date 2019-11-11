@@ -7,12 +7,15 @@
 
 import Foundation
 import HandyJSON
+import RealmSwift
 
-class OwnerModel: HandyJSON {
+class OwnerModel: Object, HandyJSON {
     
-    var id: Int = 0
-    var login: String?
-    var avatar_url: String?
+    @objc dynamic var id: Int = 0
+    @objc dynamic var login: String?
+    @objc dynamic var avatar_url: String?
     
-    required init() {}
+    override static func primaryKey() -> String? {
+        return "id"
+    }
 }

@@ -7,15 +7,19 @@
 
 import Foundation
 import HandyJSON
+import RealmSwift
 
-class PullRequestModel: HandyJSON {
+class PullRequestModel: Object, HandyJSON {
     
-    var id: Int = 0
-    var title: String?
-    var body: String?
-    var url: String?
-    var created_at: String?
-    var user: OwnerModel?
+    @objc dynamic var id: Int = 0
+    @objc dynamic var title: String?
+    @objc dynamic var body: String?
+    @objc dynamic var html_url: String?
+    @objc dynamic var created_at: String?
+    @objc dynamic var user: OwnerModel?
+    @objc dynamic var repo: RepositoryModel?
     
-    required init() {}
+    override static func primaryKey() -> String? {
+        return "id"
+    }
 }

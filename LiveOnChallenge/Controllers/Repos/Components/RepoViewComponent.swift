@@ -80,7 +80,7 @@ class RepoViewComponent: UIView {
         
         self.loadSubViews()
         self.title.text = repo.name
-        self.subTitle.text = repo.description
+        self.subTitle.text = repo.desc
         self.forksView.set(icon: #imageLiteral(resourceName: "forkIcon"), hate: repo.forks_count)
         self.starsView.set(icon: #imageLiteral(resourceName: "starIcon"), hate: repo.stargazers_count)
         self.userView.set(pictureUrl: repo.owner?.avatar_url, name: repo.owner?.login)

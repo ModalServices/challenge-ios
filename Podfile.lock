@@ -5,10 +5,10 @@ PODS:
   - AlamofireNetworkActivityLogger (2.4.0):
     - Alamofire (~> 4.8)
   - DeviceKit (2.3.0)
+  - Disk (0.4.0)
   - FCAlertView (1.4.0)
   - Gifu (3.2.0)
   - HandyJSON (4.2.1)
-  - IQKeyboardManager (6.5.3)
   - Realm (3.21.0):
     - Realm/Headers (= 3.21.0)
   - Realm/Headers (3.21.0)
@@ -24,10 +24,10 @@ DEPENDENCIES:
   - AlamofireImage (~> 3.5)
   - AlamofireNetworkActivityLogger
   - DeviceKit
+  - Disk (~> 0.4.0)
   - FCAlertView
   - Gifu
   - HandyJSON (~> 4.2.1)
-  - IQKeyboardManager
   - RealmSwift (~> 3.13)
   - SnapKit (~> 4.2.0)
   - SwiftDate (~> 5.0.9)
@@ -40,10 +40,10 @@ SPEC REPOS:
     - AlamofireImage
     - AlamofireNetworkActivityLogger
     - DeviceKit
+    - Disk
     - FCAlertView
     - Gifu
     - HandyJSON
-    - IQKeyboardManager
     - Realm
     - RealmSwift
     - SnapKit
@@ -56,10 +56,10 @@ SPEC CHECKSUMS:
   AlamofireImage: be9963c6582d68b39e89191f64c82a7d7bf40fdd
   AlamofireNetworkActivityLogger: 6d3398c692d2c5d83b0c58793537860aca1e383d
   DeviceKit: da103891aa928d89f64ea8dd8aca738c5f3d8ac0
+  Disk: ef2956657d5bb56034b38b29b352170165226440
   FCAlertView: fdddd63381898c1d1a5a20c9f084fbd2c6d12f8b
   Gifu: 7bcb6427457d85e0b4dff5a84ec5947ac19a93ea
   HandyJSON: d0c5fc80204f29056d59d3e5c4587fa0b16b60a8
-  IQKeyboardManager: c2f901164d56807a35788483584d09fa69192e8e
   Realm: 38e9dcb19104b58407167d99f70d4995f7c16023
   RealmSwift: 3183cc1ad48378fbcd634311b22c0e6c44021152
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
@@ -67,6 +67,6 @@ SPEC CHECKSUMS:
   SwiftMessageBar: bb0ca6eba6725887004bfaba0b35225681b6bd18
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
 
-PODFILE CHECKSUM: 2adea1c88dd8749c4260273bcd7c762544ec2916
+PODFILE CHECKSUM: 1bcc391a7105cf7ae3cd7dfafc10f700a1ca5264
 
 COCOAPODS: 1.7.2

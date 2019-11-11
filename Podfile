@@ -14,11 +14,11 @@ target 'LiveOnChallenge' do
     pod 'SwiftDate', '~> 5.0.9'
     pod 'FCAlertView'
     pod 'SwiftMessageBar', '~> 5.4.2'
-    pod 'IQKeyboardManager'
     pod 'RealmSwift', '~> 3.13'
     pod 'SwiftyJSON', '~> 4.2.0'
     pod 'HandyJSON', '~> 4.2.1'
     pod 'SnapKit', '~> 4.2.0'
     pod 'AlamofireImage', '~> 3.5'
+    pod 'Disk', '~> 0.4.0'
 
 end
