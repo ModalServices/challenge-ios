@@ -29,7 +29,7 @@ class RealmManager: NSObject {
             let realm = try Realm(configuration: configuration)
             securityRem(dest, directory: .sharedContainer(appGroupName: group))
             return realm
-        } catch let error as NSError {
+        } catch _ as NSError {
             // use the error object such as error.localizedDescription
             try! FileManager.default.removeItem(at: configuration.fileURL!)
             let realm = try! Realm(configuration: configuration)

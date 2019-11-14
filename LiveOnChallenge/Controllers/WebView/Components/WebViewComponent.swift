@@ -14,7 +14,6 @@ class WebViewComponent: UIView {
     lazy var web: UIWebView = {
         let btn = UIWebView(frame: .zero)
         btn.translatesAutoresizingMaskIntoConstraints = false
-        
         return btn
     }()
     
