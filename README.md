@@ -21,13 +21,13 @@ Criar um aplicativo para consultar a API do GitHub e trazer os repositórios mai
 ### A solução DEVE conter
 -    Versão mínima do iOS : 10.*
 -    Arquivo .gitignore
--    Usar Storyboard e Autolayout
+-    Usar Viewcode
 -    Gestão de dependências no projeto. Ex: Cocoapods
 -    Framework para Comunicação com API. Ex: Alamofire
 -    Mapeamento json -> Objeto . Ex: ObjectMapper
 -    Cache de Imagens. Ex SDWebImage
 -    Suporte devices a partir do iPhone 5s.
--    Desenvolvido em Swift 4.2 e Xcode 10.1.
+-    Desenvolvido em Swift 5 e Xcode 10.1.
 
 ### **Ganha + pontos se conter** ###
 -    Persistir os dados no CoreData
