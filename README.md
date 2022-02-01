@@ -42,17 +42,16 @@ O importante de fato é que os objetivos macros sejam atingidos.
 ### Processo de submissão ###
 O candidato deverá implementar a solução e enviar um pull request para este repositório com a solução.
 O processo de Pull Request funciona da seguinte maneira:
-1. Candidato fará um fork desse repositório (não irá clonar direto!)
+  
 
-2. Fará seu projeto nesse fork.
-
-3. Commitará e subirá as alterações para o SEU fork.
-
-4. Pela interface do GitHub, irá enviar um Pull Request.
-
-Se possível deixar o fork público para facilitar a inspeção do código.
+1. Faça um fork deste projeto em sua conta no [Github](https://github.com/join).
+2. Crie um repositório *privado*, com a solução do seu desafio. 
+3. Em seguida, desenvolva o projeto. 
+4.  Adicione como membro do repositório o usuario [@vagas-modalservices](https://github.com/vagas-modalservices).
+5. Por fim, envie um email informando que concluiu o desafio p/ vagas@liveonsolutions.com. (coloque no assunto o nome do desafio)
 
 **ATENÇÃO**
 Não se deve tentar fazer o PUSH diretamente para ESTE repositório!
 
-Se você já entrou em contato com alguém da LiveOnSolutions sobre a vaga, além de fazer o Pull Request avise também essa pessoa por email, incluindo no email o seu usuário no GitHub.
+ 
+Se você já entrou em contato com alguém do [MaaS](https://github.com/ModalServices) sobre a vaga, além de fazer o Pull Request avise também por email vagas@liveonsolutions.com, incluindo no email o seu usuário no GitHub.
